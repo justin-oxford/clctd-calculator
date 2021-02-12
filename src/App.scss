@@ -1,0 +1,98 @@
+.App {
+  // position/scale/margins
+  margin: auto;
+  max-width: 500px;
+  height: max-content;
+  padding: 0 50px;
+
+  // colors and decorations
+  border-radius: 15px;
+  background-color: #fff;
+
+  // text properties
+  text-align: center;
+
+  // grid
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content min-content;
+
+  // drop shadow
+  -webkit-box-shadow: 5px 5px 25px 0px rgba(0,0,0,0.07);
+  -moz-box-shadow: 5px 5px 25px 0px rgba(0,0,0,0.07);
+  box-shadow: 5px 5px 25px 0px rgba(0,0,0,0.07);
+}
+
+// ########################################################
+// display-container contains the inputs and output fields, as well as the math symbols
+.display-container
+{
+  // position/scale/margins
+  margin: 100px auto 20px;
+
+  // grid
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+
+  // things like +, - , =, etc.
+  .math-symbol
+  {
+    // text properties
+    font-size: 2.3vh;
+  }
+}
+
+
+// ########################################################
+// button-container contains the buttons (no joke)
+.button-container
+{
+  // position/scale/margins
+  margin: 30px 0 40px;
+
+  // all button tags in the container
+  button
+  {
+    // position/scale/margins
+    float: right;
+    margin: auto auto auto 25px;
+    width: 120px;
+    height: 50px;
+    padding: 10px;
+
+    // colors and decorations
+    border: 2px solid transparent;
+    border-radius: 25px;
+    background-color: #333;
+
+    // text properties
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+
+    &:disabled
+    {
+      color: #aaa;
+      background-color: #ccc;
+    }
+
+    &:hover {
+      &:not(:disabled)
+      {
+        background-color: #444;
+      }
+    }
+
+    &:focus {
+      outline: none;
+      border: 2px solid royalblue;
+      background-color: #444;
+      // drop shadow
+      -webkit-box-shadow: 5px 5px 9px 0px rgba(0,0,0,0.1);
+      -moz-box-shadow: 5px 5px 9px 0px rgba(0,0,0,0.1);
+      box-shadow: 5px 5px 9px 0px rgba(0,0,0,0.1);
+    }
+  }
+}
+

@@ -1,0 +1,51 @@
+/* set the font for inputs to open sans to match UI */
+input{
+    font-family: 'Open Sans', sans-serif;
+
+    &:focus
+    {
+        outline: none;
+        border: 2px solid rgb(123, 184, 221);
+        // drop shadow
+        -webkit-box-shadow: 5px 5px 9px 0px rgba(0,0,0,0.1);
+        -moz-box-shadow: 5px 5px 9px 0px rgba(0,0,0,0.1);
+        box-shadow: 5px 5px 9px 0px rgba(0,0,0,0.1);
+    }
+}
+
+/* disable the arrows for number inputs */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.value-box
+{
+    // position/scale/margins
+    margin: auto;
+    padding: 0;
+    width: 100px;
+    height: 100px;
+
+    // colors and decorations
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: #eee;
+
+    // text properties
+    text-align: center;
+    font-size: 2.5vh;
+    font-weight: 600;
+
+    // grid to help center
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+}
